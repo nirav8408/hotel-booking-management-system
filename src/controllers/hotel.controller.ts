@@ -9,15 +9,9 @@ const hotelController={
     {   
         try
         {
-
             const city=req.body.city
-
-            console.log(city)
             const hotels=await hotelservice.gethotel(city);
-            console.log(hotels)
             res.status(200).json({sucess:true,data:hotels})
-
-
         }
         catch(err)
         {
